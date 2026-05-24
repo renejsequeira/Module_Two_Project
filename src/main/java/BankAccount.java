@@ -41,6 +41,23 @@ public class BankAccount extends JFrame{
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
 			JOptionPane.showMessageDialog(null, "Hey Buddy!");
+			NewBankAccount newAccount = new NewBankAccount();
+			newAccount.setFirstName("Rene");
+			newAccount.setLastName("Sequeira");
+			newAccount.setaccountID(146718);
+			newAccount.deposit(2000);
+			newAccount.withdrawal(500);
+			//System.out.println(newAccount.getBalance());
+			newAccount.accountSummary();
+			
+			NewCheckingAccount newCheckingAccount = new NewCheckingAccount();
+			//newCheckingAccount.displayAccount();
+			System.out.println(" ");
+			newCheckingAccount.setFirstName("Patsy");
+			newCheckingAccount.setLastName("Hernandez");
+			newCheckingAccount.deposit(5000);
+			newCheckingAccount.setaccountID(146789);
+			newCheckingAccount.displayAccount();
 			
 		}
 		
