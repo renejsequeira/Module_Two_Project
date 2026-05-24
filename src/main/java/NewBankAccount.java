@@ -4,16 +4,16 @@ public class NewBankAccount {
 	protected String firstName;
 	protected String lastName;
 	protected int accountID;
-	protected Double balance;
+	protected static Double balance;
 	
 	public NewBankAccount() {
 		balance = 0.0;
 	 }
-	public void deposit(double d) {
+	public static void deposit(double d) {
 		balance += d;
 	 }
 	
-	public void withdrawal(double w) {
+	public static void withdrawal(double w) {
 		balance -= w;
 	 }
 	 public void setFirstName(String n) {
@@ -27,7 +27,7 @@ public class NewBankAccount {
 		 accountID = a;
 	 }
 	 
-	 public double getBalance() {
+	 public static double getBalance() {
 		 return balance;
 	 }
 	 
@@ -38,23 +38,5 @@ public class NewBankAccount {
 		 System.out.println("Balance: "+ balance); 
 	 }
 
-	/*public static void main(String[] args) {
-		BankAccount newAccount = new BankAccount();
-		newAccount.setFirstName("Rene");
-		newAccount.setLastName("Sequeira");
-		newAccount.setaccountID(146718);
-		newAccount.deposit(2000);
-		newAccount.withdrawal(500);
-		//System.out.println(newAccount.getBalance());
-		newAccount.accountSummary();
-		
-		CheckingAccount newCheckingAccount = new CheckingAccount();
-		//newCheckingAccount.displayAccount();
-		System.out.println(" ");
-		newCheckingAccount.setFirstName("Patsy");
-		newCheckingAccount.setLastName("Hernandez");
-		newCheckingAccount.deposit(5000);
-		newCheckingAccount.setaccountID(146789);
-		newCheckingAccount.displayAccount();
-	}*/
+
 }
